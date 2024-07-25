@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Roger.css">
+    <title>Profile Card</title>
+    <style>
+        .card-header img {
+            width: 100%; /* Adjust the width */
+            display: block; /* Remove any inline spacing */
+        }
+        .card-body h2 {
+            color: #000; /* Black color for the name */
+        }
+        .contact-info a img {
+            /*filter: invert(22%) sepia(89%) saturate(3626%) hue-rotate(352deg) brightness(100%) contrast(101%);
+            /* Adjusted to make the images red */
+        }
+        .contact-info a:active, .contact-info a:focus {
+            color: #c40000; /* Red color for the words when clicked */
+        }
+        .contact-info a:active img, .contact-info a:focus img {
+            filter: invert(22%) sepia(89%) saturate(3626%) hue-rotate(352deg) brightness(100%) contrast(101%);
+            /* Make images red when clicked */
+        }
+        .contact-info a.instagram:active, .contact-info a.instagram:focus {
+            color: #c40000; /* Red color for Instagram when clicked */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <img src="Roger1.jpeg" alt="Roger1.jpeg">
+        </div>
+        <hr class="divider">
+        <div class="card-body">
+            <h2>Roger Karam</h2>
+            <ul class="contact-info">
+                <li>
+                    <a href="https://www.instagram.com/_roger.karam" target="_blank">
+                        <img src="instagram_icon_dark copy.png" alt="Instagram">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/roger-karam" target="_blank">
+                        <img src="linkedin.jpeg" alt="LinkedIn">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+96181240995">
+                        <img src="phone_icon_dark copy.png" alt="Phone Number">
+                        Phone
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="save-contact" onclick="downloadVCard()">SAVE CONTACT</button> 
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Roger Karam
+TEL;TYPE=WORK,VOICE:+96181240995
+END:VCARD
+`;
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Roger_Karam.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px; /* Adjusted width */
+    height: 750px; /* Adjusted height */
+    border: none; /* Ensure there's no border */
+}
+
+.card-header {
+    background-color: #c40000;
+    padding: 0;
+    text-align: center;
+}
+
+.card-header img {
+    width: 100%;
+    display: block; /* Remove any inline spacing */
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid darkred;
+    margin: 0;
+}
+
+.card-body {
+    padding: 25px; /* Adjusted padding */
+}
+
+.card-body h2 {
+    margin: 0 0 20px;
+    font-size: 24px; /* Adjusted font size */
+    font-weight: bold;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove any default margin */
+}
+
+.contact-info li {
+    margin-bottom: 10px; /* Adjusted margin between items */
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.contact-info a img {
+    margin-right: 10px; /* Adjusted margin */
+    width: 32px; /* Adjusted size */
+    height: 32px; /* Adjusted size */
+    transition: transform 0.3s; /* Smooth transition for transform */
+}
+
+.contact-info a:hover {
+    color: #5B3133; /* Change color on hover */
+}
+
+.contact-info a:hover img {
+    transform: scale(1.2); /* Scale up icon on hover */
+}
+
+.save-contact {
+    background-color: #5B3133; /* Changed background color */
+    border: none;
+    color: white;
+    padding: 20px; /* Adjusted padding */
+    text-align: center;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px; /* Adjusted font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.save-contact:hover {
+    background-color: darkred; /* Changed hover background color */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
